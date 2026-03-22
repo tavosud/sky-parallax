@@ -1,0 +1,36 @@
+/**
+ * @tavosud/sky-parallax — Parallax container styles.
+ *
+ * All animated values are driven by CSS custom properties set directly from
+ * the lerp animation loop. No React re-renders occur on scroll.
+ *
+ * Custom properties and their defaults:
+ *   --parallax-offset-x   0px    (lateral translation)
+ *   --parallax-offset-y   0px    (vertical translation)
+ *   --parallax-scale      1      (zoom factor, e.g. 1.08)
+ *   --parallax-rotate     0deg   (rotation in degrees)
+ *   --parallax-opacity    1      (fade effect)
+ */
+
+.sky-parallax {
+  /**
+   * Promote to a dedicated GPU compositor layer. The browser can apply
+   * transform and opacity changes without triggering layout or paint.
+   */
+  will-change: transform, opacity;
+
+  /**
+   * All four effects are composed into a single transform declaration.
+   * Functions are applied in order: translate → scale → rotate.
+   * Fallback values ensure correct display before the first frame fires.
+   */
+  transform:
+    translateX(var(--parallax-offset-x, 0px))
+    translateY(var(--parallax-offset-y, 0px))
+    scale(var(--parallax-scale, 1))
+    rotate(var(--parallax-rotate, 0deg));
+
+  opacity: var(--parallax-opacity, 1);
+}
+
+

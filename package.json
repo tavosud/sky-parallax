@@ -1,0 +1,50 @@
+{
+  "name": "@tavosud/sky-parallax",
+  "version": "1.0.0",
+  "description": "Lightweight React parallax component with zero dependencies. Scroll-driven motion using CSS custom properties and IntersectionObserver for maximum performance.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "style": "dist/index.css",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./dist/index.css": "./dist/index.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "parallax",
+    "scroll",
+    "animation",
+    "performance",
+    "typescript",
+    "intersection-observer",
+    "accessibility"
+  ],
+  "author": "tavosud",
+  "license": "MIT",
+  "sideEffects": [
+    "*.css"
+  ],
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.28",
+    "react": "^19.2.4",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
+}
