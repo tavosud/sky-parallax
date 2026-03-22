@@ -1,6 +1,6 @@
 {
   "name": "@tavosud/sky-parallax",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Lightweight React parallax component with zero dependencies. Scroll-driven motion using CSS custom properties and IntersectionObserver for maximum performance.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
