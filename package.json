@@ -36,6 +36,14 @@
   ],
   "author": "tavosud",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tavosud/sky-parallax.git"
+  },
+  "homepage": "https://github.com/tavosud/sky-parallax#readme",
+  "bugs": {
+    "url": "https://github.com/tavosud/sky-parallax/issues"
+  },
   "sideEffects": [
     "*.css"
   ],
