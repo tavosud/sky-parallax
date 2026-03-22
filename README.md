@@ -1,5 +1,12 @@
 # @tavosud/sky-parallax
 
+[![npm version](https://img.shields.io/npm/v/@tavosud/sky-parallax.svg?style=flat-square)](https://www.npmjs.com/package/@tavosud/sky-parallax)
+[![npm downloads](https://img.shields.io/npm/dm/@tavosud/sky-parallax.svg?style=flat-square)](https://www.npmjs.com/package/@tavosud/sky-parallax)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/@tavosud/sky-parallax?style=flat-square)](https://bundlephobia.com/package/@tavosud/sky-parallax)
+[![license](https://img.shields.io/npm/l/@tavosud/sky-parallax.svg?style=flat-square)](https://github.com/tavosud/sky-parallax/blob/master/LICENSE)
+[![demo](https://img.shields.io/badge/demo-CodeSandbox-black?style=flat-square&logo=codesandbox)](https://codesandbox.io/p/sandbox/sky-parallax-zq3qkx)
+[![support](https://img.shields.io/badge/support_me-Ko--fi-FF5E5B?style=flat-square&logo=ko-fi&logoColor=white)](https://ko-fi.com/tavosud)
+
 A lightweight, zero-dependency React component and headless hook that apply smooth scroll-driven parallax motion to any element — images, text, divs, or any HTML tag.
 
 Built for production: no re-renders on scroll, IntersectionObserver gating, GPU-accelerated transforms, full WCAG 2.1 accessibility support, and custom scroll container support.
