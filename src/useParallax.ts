@@ -198,17 +198,14 @@ export function useParallax(
         distanceX = rect.left + rect.width  / 2 - window.innerWidth  / 2;
       }
 
-      // Normalize to [-1, 1] using the primary axis dimension (fixes X axis scaling).
-      const primaryDistance = a === 'x' ? distanceX : distanceY;
-      const primaryHalf = a === 'x'
-        ? (container ? container.clientWidth  / 2 : window.innerWidth  / 2)
-        : (container ? container.clientHeight / 2 : window.innerHeight / 2);
-
-      const normalized      = clamp(primaryDistance / primaryHalf, -1, 1);
+      // Pages scroll vertically, so normalize using vertical distance for all axes.
+      // axis="x" applies vertical scroll progress to the X axis (lateral drift effect).
+      const primaryHalf = container ? container.clientHeight / 2 : window.innerHeight / 2;
+      const normalized      = clamp(distanceY / primaryHalf, -1, 1);
       const centerProximity = 1 - Math.abs(normalized);
 
-      if (a !== 'x') targetY = distanceY * s;
-      if (a !== 'y') targetX = distanceX * s;
+      targetY = a !== 'x' ? distanceY * s : 0;
+      targetX = a !== 'y' ? distanceY * s : 0;
       targetSc  = sc !== 0 ? 1 + centerProximity * sc : 1;
       targetRot = r  !== 0 ? normalized * r           : 0;
       targetOp  = f        ? clamp(centerProximity * 1.4, 0, 1) : 1;
